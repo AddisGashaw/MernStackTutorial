@@ -52,7 +52,7 @@ res.status(200).json(studentforspecificid)
 const updatestudent = async (req, res) => {
     const { id } = req.params;
     try {
-      const studentForSpecificId = await studentModel.findByIdAndUpdate(id, req.body, { new: true });
+      const studentForSpecificId = await studentmodel.findByIdAndUpdate(id, req.body, { new: true });
       if (!studentForSpecificId) {
         return res.status(404).json({ error: `No data found for ID: ${id}` });
       }
